@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+
+<h3 class="display-3">Design Project 3 (Data Driven World)</h1>
+
+<p class="lead">The aim of this project was to use machine learning models to solve COVID-19 related problems
+</p>
+
+<h6 class="display-6">Task 1</h1>
+<div>
+<p>
+    Aim: Predict the number of covid related deaths 
+    <br>
+
+    For this project, the death on the next day is predicted using several variables, and a linear regression method was used to form the model.
+    The data from this dataset is sourced from the Our World in Data Organization and holds daily covid data from over 200 countries. This link can be found below:
+   
+    <br>
+
+    <br><a href="https://ourworldindata.org/coronavirus">Data </a>
+    <br>
+    <br>
+    The countries used in our dataset was selected through k-nearest-neighbours to find closely related countries and the countries are visualised below
+    <div><img src="static\Pics\Picture1.png" alt="countries" width="500" height="600"> </div>
+    <br>
+    These countries data was then selected and further processed to train the model. 
+    <br>
+    You can try a smaller version of the model to predict Covid Deaths Tomorrow 
+    
+    <div><a href="pred">Predict</a>
+    </div>
+    <br>
+
+</p>
+<br>
+<h6 class="display-6">Task 2</h1>
+<br>
+<div>
+    <p>
+    
+        Aim: Distinguish Fake News from Real News 
+        <br>
+        For this project, a logistic regression model was used to determine if a news article contains fake or real news.
+        The data from this dataset contains news articles from real and fake sources and contain some other information about each article:
+        <br>
+        <br><a href="https://github.com/cuilimeng/CoAID">Data </a>
+        <br>
+        <br>
+        Some of the features used in this model is the length of the title, abstract and how many keywords or 'metawords' are identified in the post
+        <br>
+        <div><img src="static\Pics\Picture2.jfif" alt="countries"></div>
+        This model achieved a 90% accuracy, try our quiz to see if you can beat that from just the title of the post
+
+        <div>
+        <br><a href="quiz">Quiz</a>
+        </div>
+        
+    </p>
+    </div>
+    
+
+
+
+{% endblock %}

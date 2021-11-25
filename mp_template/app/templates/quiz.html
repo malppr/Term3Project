@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+<h1>Can you beat our Model with just the news title</h1>
+<h2>Try to answer more than 18 correct to beat our Model!</h2>
+
+<table class="table table-striped" >
+  <thead>
+    <tr>
+      <th scope="col">News Title</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for idx in range(users|length) %}
+  	<tr>
+      <th scope="row" class="lead">{{ users[idx].title }}</th>
+      <td class="lead">
+        <INPUT TYPE="Radio" Name="RF{{idx}}" Value="Real">Real
+        <INPUT TYPE="Radio" Name="RF{{idx}}" Value="Fake">Fake
+      </td>
+      <td class="lead">
+        <p>
+
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample{{idx}}" aria-expanded="false" aria-controls="collapseExample">
+            Reveal Real or Fake
+          </button>
+        </p>
+        <div class="collapse" id="collapseExample{{idx}}">
+          <div class="card card-body">
+            {{ users[idx].yn }}         
+           </div>
+        </div>
+      </td>
+      
+    </tr>
+  {% endfor %}
+  
+  </tbody>
+</table>
+
+
+{% endblock %}

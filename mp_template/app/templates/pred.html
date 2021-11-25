@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+
+<h3 class="display-1">Predict COVID 19 Deaths Tomorrow</h1>
+
+<p class="lead">This is a simplified model of the linear regression used in our Task 1. This model uses 5 predictor variables, as compared to the 16 columns used in our model
+</p>
+
+<p>
+    Input the respective predictor variables for today and submit to see the predicted number of COVID deaths tommorrow
+</p>
+<p>
+    <div id="generate">Total number of deaths :</div>
+    <input type="text" id="total_death" name="numbers"><br><br>
+
+    <div id="generate">Number of new cases :</div>
+    <input type="text" id="new_cases" name="numbers"><br><br>
+</p>
+<p>
+    <div id="generate">Number of New Tests Rate :</div>
+    <input type="text" id="new_tests" name="numbers"><br><br>
+
+    <div id="generate">People Vaccinated (Number of People with 1 dose) :</div>
+    <input type="text" id="people_vacc" name="numbers"><br><br>
+</p>
+<p>
+    <div id="generate">Number of New Vaccinations :</div>
+    <input type="text" id="new_vaccinations" name="numbers"><br><br>
+</p>
+    <div id="sorted">Predicted Number of deaths Tommorrow:</div>
+    <div id="sorted1"></div>
+    <button onclick="library.gen_death()">Sort</button>
+</p>
+<p>
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#disclamier" aria-expanded="false" aria-controls="disclamier">
+        Disclaimer
+      </button>
+    </p>
+    <div class="collapse" id="disclamier">
+      <div class="card card-body">
+         This Model is calibrated for countries in the following: 'North Macedonia', 'Mongolia', 'Norway', 'Suriname', 'Chile', 'Barbados', 'Finland', 'Turkmenistan', 'Jordan', 'Uzbekistan', 'Fiji', 'Russia', 'Serbia', 'Bahrain', 'El Salvador', 'Kyrgyzstan', 'Argentina', 'South Korea', 'Qatar', 'Croatia', 'Malta', 'Saint Vincent and the Grenadines', 'Spain', 'Libya', 'Turkey', 'Guyana', 'Belize', 'Lithuania', 'Portugal', 'Sweden', 'Gabon', 'Costa Rica', 'Cape Verde', 'Guatemala', 'Armenia', 'Denmark', 'Myanmar', 'Uruguay', 'Australia', 'India', 'Botswana', 'Malaysia', 'Austria', 'Brazil', 'Japan', 'Iraq', 'Andorra', 'Bahamas', 'Belarus', 'Germany', 'Cuba', 'Singapore', 'Palestine', 'Timor', 'Slovenia', 'Bangladesh', 'Kazakhstan', 'Honduras', 'Slovakia', 'Papua New Guinea', 'Mexico', 'Oman', 'Mauritius', 'Albania', 'Sri Lanka', 'Paraguay', 'Algeria', 'Tonga', 'China', 'Brunei', 'Latvia', 'Namibia', 'Hong Kong', 'Dominican Republic', 'Georgia', 'Iran', 'Ukraine', 'United Arab Emirates', 'Colombia', 'Bolivia', 'Moldova', 'Antigua and Barbuda', 'Tunisia', 'Greece', 'Romania', 'Maldives', 'Trinidad and Tobago', 'Kuwait', 'Panama', 'Switzerland', 'South Africa', 'Ireland', 'Bosnia and Herzegovina', 'Saudi Arabia', 'Indonesia', 'Philippines', 'Tajikistan', 'Vietnam', 'Nepal', 'Jamaica', 'New Zealand', 'Azerbaijan', 'Morocco', 'Iceland', 'Egypt', 'Kiribati', 'Lebanon', 'Saint Lucia', 'Seychelles', 'Poland', 'Thailand', 'Canada', 'Ecuador', 'Bhutan', 'Hungary', 'Venezuela', 'Israel', 'Pakistan', 'Estonia'        
+       </div>
+    </div>
+    <div id="generate"> </div>
+</p>
+<br><a href="index">Home</a>
+
+
+{% endblock %}
